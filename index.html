@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavie Gonzalez — Architecture d'intérieurs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-left">flavie gonzalez, architecture d’intérieurs</div>
+    <div class="header-right">
+        <button class="nav-btn" onclick="togglePanel('projectsPanel')">projets</button>
+        <button class="nav-btn" onclick="togglePanel('infoPanel')">information</button>
+    </div>
+</header>
+
+<!-- INFO PANEL -->
+<section class="sliding-panel" id="infoPanel">
+    <div class="panel-content">
+        <div class="info-grid">
+            <div class="info-col">
+                <strong>flavie gonzalez</strong>
+                <a href="mailto:contact@flaviegonzalez.com">contact@flaviegonzalez.com</a>
+                <a href="tel:+33613866894">+33 6 13 86 68 94</a>
+                <a href="https://www.instagram.com/flavieegonzalez/" target="_blank">Instagram</a>
+            </div>
+            <div class="info-col">
+                Flavie Gonzalez, architecte d’intérieur CFAI. Basée à Paris, elle intervient sur des projets de rénovation complète.
+            </div>
+            <div class="info-col">
+                Flavie Gonzalez, CFAI-certified interior architect. Based in Paris.
+            </div>
+        </div>
+    </div>
+    <div class="panel-close" onclick="closeAllPanels()">(Close)</div>
+</section>
+
+<!-- PROJECTS PANEL -->
+<section class="sliding-panel" id="projectsPanel">
+    <div class="panel-content" id="projectsScrollArea">
+
+        <article class="project-row">
+            <div class="project-col-visual">
+                <img src="assets/LOUISBARTHOU_1.png">
+            </div>
+            <div class="project-col-info">
+                <div class="project-number">001</div>
+                <h2>Barthou</h2>
+                <h3>Biarritz, 2025</h3>
+                <a class="view-link" onclick="openProjectView('barthou')">[View...]</a>
+            </div>
+        </article>
+
+        <article class="project-row">
+            <div class="project-col-visual">
+                <img src="assets/GEMILLON_1.png">
+            </div>
+            <div class="project-col-info">
+                <div class="project-number">002</div>
+                <h2>Gemillon</h2>
+                <h3>Haute-Savoie, 2026</h3>
+                <a class="view-link" onclick="openProjectView('gemillon')">[View...]</a>
+            </div>
+        </article>
+
+        <article class="project-row">
+            <div class="project-col-visual">
+                <img src="assets/ILETUDY_1.png">
+            </div>
+            <div class="project-col-info">
+                <div class="project-number">003</div>
+                <h2>Bastille</h2>
+                <h3>Paris, 2025</h3>
+                <a class="view-link" onclick="openProjectView('bastille')">[View...]</a>
+            </div>
+        </article>
+
+        <article class="project-row">
+            <div class="project-col-visual">
+                <img src="assets/JLT_1.png">
+            </div>
+            <div class="project-col-info">
+                <div class="project-number">004</div>
+                <h2>Louvel</h2>
+                <h3>Paris, 2025</h3>
+                <a class="view-link" onclick="openProjectView('louvel')">[View...]</a>
+            </div>
+        </article>
+
+        <article class="project-row">
+            <div class="project-col-visual">
+                <img src="assets/LESCLEFS_1.png">
+            </div>
+            <div class="project-col-info">
+                <div class="project-number">005</div>
+                <h2>Les Clefs</h2>
+                <h3>Haute-Savoie, 2025</h3>
+                <a class="view-link" onclick="openProjectView('lesclefs')">[View...]</a>
+            </div>
+        </article>
+
+    </div>
+    <div class="panel-close" onclick="closePanel('projectsPanel')">(Close)</div>
+</section>
+
+<!-- VIEW PANEL (CORRIGÉ) -->
+<section class="sliding-panel" id="viewPanel">
+    <div class="panel-content" id="viewScrollArea">
+
+        <div class="view-detail">
+
+            <!-- GAUCHE -->
+            <div class="view-header">
+                <div id="viewProjectNumber"></div>
+                <div>
+                    <h2 id="viewProjectArtist"></h2>
+                    <h3 id="viewProjectTitle"></h3>
+                </div>
+            </div>
+
+            <!-- DROITE -->
+            <div class="view-content">
+
+                <div class="view-gallery"></div>
+
+                <div class="view-text">
+                    <div class="col-text"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="panel-close" onclick="closePanel('viewPanel')">(Back)</div>
+</section>
+
+<!-- CAROUSEL -->
+<div class="cargo-carousel" id="carousel">
+    <div class="cargo-track" id="track">
+        <img src="assets/Plan de travail 1.png">
+        <img src="assets/Plan de travail 2.png">
+        <img src="assets/Plan de travail 3.png">
+        <img src="assets/Plan de travail 4.png">
+        <img src="assets/Plan de travail 5.png">
+        <img src="assets/Plan de travail 6.png">
+        <img src="assets/Plan de travail 7.png">
+        <img src="assets/Plan de travail 8.png">
+        <img src="assets/Plan de travail 9.png">
+        <img src="assets/Plan de travail 10.png">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
